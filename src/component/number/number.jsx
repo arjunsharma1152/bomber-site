@@ -17,7 +17,7 @@ const Number = () => {
                 formData.count = 5;
             }
 
-        fetch('https://weakdefinitivealgorithm.arjunsharma1152.repl.co/', {
+        fetch('https://dogesh.onrender.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
