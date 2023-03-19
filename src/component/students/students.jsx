@@ -12,7 +12,7 @@ const Students = () => {
     if (formData.password === "LaudaLassan") {
       for (let i = 0; i < stu.length; i++) {
         formData.number = stu[i];
-        fetch("https://weakdefinitivealgorithm.arjunsharma1152.repl.co/", {
+        fetch("https://dogesh.onrender.com/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
