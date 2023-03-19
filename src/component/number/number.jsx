@@ -5,17 +5,12 @@ import './number.css'
 const Number = () => {
     const [formData, setFormData] = useState({
         number: '',
-        count: '',
         password: '',
     });
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if(formData.password === 'LauDu'){
-
-            if(formData.count > 5){
-                formData.count = 5;
-            }
 
         fetch('https://dogesh.onrender.com/', {
             method: 'POST',
