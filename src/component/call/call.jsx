@@ -1,18 +1,17 @@
-
 import React, { useState } from 'react';
-import './number.css'
 
-const Number = () => {
+const Call = () => {
     const [formData, setFormData] = useState({
         number: '',
         password: '',
+        otp_via: 'call'
     });
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if(formData.password === 'LauDu'){
 
-        fetch('https://dogesh.onrender.com/', {
+        fetch('https://dogesh.onrender.com/bomb', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +42,7 @@ const Number = () => {
 
     return (
         <>
-        <h1>SMS BOMB</h1>
+        <h1>CALL BOMB</h1>
         <form onSubmit={handleSubmit}>
             <label>
                 Number: 
@@ -53,10 +52,17 @@ const Number = () => {
                 Password: 
                 <input type="password" name="password" value={formData.password} onChange={handleInputChange} />
             </label>
+            <label>
+                Select: 
+                <select id='dropdownInput' name='otp_via' value={formData.otp_via} onChange={handleInputChange}>
+                    <option value="call">Call</option>
+                    <option value="whatsapp">Whatsapp</option>
+                </select>
+            </label>
             <button type="submit">Submit</button>
         </form>
         </>
     );
 }
 
-export default Number;
+export default Call;
